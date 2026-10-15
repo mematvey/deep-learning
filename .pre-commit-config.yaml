@@ -1,0 +1,35 @@
+exclude: |
+  (?x)^(
+    .*\.ipynb|
+    .*/artifacts/.*|
+    .*/uv\.lock|
+    homeworks/[^/]+/(README\.txt|requirements\.txt)
+  )$
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      - id: check-merge-conflict
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-toml
+      - id: check-yaml
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.0
+    hooks:
+      - id: ruff-check
+      - id: ruff-format
+        args: [--check]
+
+  - repo: local
+    hooks:
+      - id: forbid-venv-and-data
+        name: forbid .venv/ and data/ in commit
+        language: fail
+        entry: .venv/ и data/ не коммитятся
+        files: (^|/)(\.venv|data)/

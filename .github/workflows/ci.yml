@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: pre-commit (все файлы)
+        run: uvx pre-commit run --all-files --show-diff-on-failure
+
+      - name: uv lock --check для каждой домашки
+        shell: bash
+        run: |
+          for dir in homeworks/*/; do
+            if [ -f "${dir}pyproject.toml" ]; then
+              echo "::group::${dir}"
+              (cd "$dir" && uv lock --check)
+              echo "::endgroup::"
+            fi
+          done
