@@ -16,8 +16,20 @@ git switch hwN
 
 2) Установить [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
-2) Выполнить:
+3) Выполнить:
 ```
 cd homeworks/hwN
 uv sync --locked
+```
+
+### MLflow
+
+Сервер для логирования лежит в [mlflow-server/](mlflow-server/). Запуск и настройка — в [mlflow-server/README.md](mlflow-server/README.md)
+Образ собирается из `mlflow-server/uv.lock` через простой `docker compose up`
+
+### Pre-commit
+
+```
+uv tool install pre-commit
+pre-commit install
 ```

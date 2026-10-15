@@ -18,10 +18,10 @@ jobs:
       - name: pre-commit (все файлы)
         run: uvx pre-commit run --all-files --show-diff-on-failure
 
-      - name: uv lock --check для каждой домашки
+      - name: uv lock --check для каждой домашки и mlflow-server
         shell: bash
         run: |
-          for dir in homeworks/*/; do
+          for dir in homeworks/*/ mlflow-server/; do
             if [ -f "${dir}pyproject.toml" ]; then
               echo "::group::${dir}"
               (cd "$dir" && uv lock --check)
