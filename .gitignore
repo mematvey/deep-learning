@@ -5,6 +5,10 @@ venv/
 !.env.example
 
 data/
+seminars/
+*.zip
+*.pt
+*.pth
 
 __pycache__/
 *.py[cod]
