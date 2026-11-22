@@ -1,0 +1,261 @@
+{
+  "track": "cv",
+  "model": "yolo26s.pt",
+  "revision": "ultralytics==8.4.216; sha256=646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+  "dataset": "OpenDetection-15K-Dense-v2.0; https://huggingface.co/datasets/prithivMLmods/OpenDetection-15K-Dense-v2.0; Apache-2.0",
+  "classes": [
+    "backpack",
+    "bench",
+    "bicycle",
+    "bird",
+    "boat",
+    "book",
+    "bottle",
+    "bowl",
+    "bus",
+    "car",
+    "cell phone",
+    "chair",
+    "couch",
+    "cup",
+    "dining table",
+    "dog",
+    "frisbee",
+    "handbag",
+    "horse",
+    "laptop",
+    "motorcycle",
+    "person",
+    "potted plant",
+    "skateboard",
+    "sports ball",
+    "suitcase",
+    "surfboard",
+    "traffic light",
+    "truck",
+    "tv",
+    "umbrella",
+    "wine glass"
+  ],
+  "n_train": 1399,
+  "n_val": 302,
+  "n_test": 299,
+  "params_total": 10009784,
+  "baseline": {
+    "split": "test",
+    "coco_map50": 0.7104014365508231,
+    "heuristic_map50": 0.00016113232909594687,
+    "heuristic_ap50_per_class": {
+      "backpack": 0.0,
+      "bench": 0.0,
+      "bicycle": 0.0,
+      "bird": 0.0,
+      "boat": 0.0,
+      "book": 0.0,
+      "bottle": 0.0,
+      "bowl": 0.0,
+      "bus": 0.0,
+      "car": 0.0,
+      "cell phone": 0.0,
+      "chair": 0.0,
+      "couch": 0.0013157894736842105,
+      "cup": 0.0,
+      "dining table": 0.0,
+      "dog": 0.0,
+      "frisbee": 0.0,
+      "handbag": 0.0,
+      "horse": 0.0,
+      "laptop": 0.0,
+      "motorcycle": 0.0,
+      "person": 0.0003936663459014959,
+      "potted plant": 0.0,
+      "skateboard": 0.0,
+      "sports ball": 0.00047058823529411766,
+      "suitcase": 0.0,
+      "surfboard": 0.0,
+      "traffic light": 0.0,
+      "truck": 0.0,
+      "tv": 0.002976190476190476,
+      "umbrella": 0.0,
+      "wine glass": 0.0
+    }
+  },
+  "final": {
+    "map50": 0.672724187271833,
+    "map50_95": 0.5461759192695957,
+    "precision": 0.6904146412743233,
+    "recall": 0.6061081821975147,
+    "per_class": {
+      "backpack": {
+        "map50": 0.6641687607381135,
+        "map50_95": 0.3872922993823789
+      },
+      "bench": {
+        "map50": 0.4219831316026966,
+        "map50_95": 0.31353651139573036
+      },
+      "bicycle": {
+        "map50": 0.9497011144883487,
+        "map50_95": 0.6856203892307886
+      },
+      "bird": {
+        "map50": 0.9116666666666666,
+        "map50_95": 0.795
+      },
+      "boat": {
+        "map50": 0.7315,
+        "map50_95": 0.5480234693877553
+      },
+      "book": {
+        "map50": 0.455,
+        "map50_95": 0.38425000000000004
+      },
+      "bottle": {
+        "map50": 0.7320787659500194,
+        "map50_95": 0.5774494544621248
+      },
+      "bowl": {
+        "map50": 0.6330952380952383,
+        "map50_95": 0.5309761904761906
+      },
+      "bus": {
+        "map50": 0.8491666666666666,
+        "map50_95": 0.8033333333333333
+      },
+      "car": {
+        "map50": 0.8390227343092129,
+        "map50_95": 0.6573340875968511
+      },
+      "cell phone": {
+        "map50": 0.35607142857142865,
+        "map50_95": 0.11261904761904766
+      },
+      "chair": {
+        "map50": 0.7533125606931916,
+        "map50_95": 0.6001773260651904
+      },
+      "couch": {
+        "map50": 0.8283333333333334,
+        "map50_95": 0.5234166666666666
+      },
+      "cup": {
+        "map50": 0.579969696969697,
+        "map50_95": 0.4510492956567445
+      },
+      "dining table": {
+        "map50": 0.7314553571428571,
+        "map50_95": 0.6070791666666666
+      },
+      "dog": {
+        "map50": 0.9525117234981768,
+        "map50_95": 0.7989188253111723
+      },
+      "frisbee": {
+        "map50": 0.029117647058823533,
+        "map50_95": 0.01747058823529412
+      },
+      "handbag": {
+        "map50": 0.2936624629136904,
+        "map50_95": 0.1943720328867748
+      },
+      "horse": {
+        "map50": 0.995,
+        "map50_95": 0.8630000000000002
+      },
+      "laptop": {
+        "map50": 0.9775,
+        "map50_95": 0.7579
+      },
+      "motorcycle": {
+        "map50": 0.9583333333333333,
+        "map50_95": 0.7173333333333333
+      },
+      "person": {
+        "map50": 0.9587558023693202,
+        "map50_95": 0.8170260144891316
+      },
+      "potted plant": {
+        "map50": 0.7116666666666667,
+        "map50_95": 0.6113883883883884
+      },
+      "skateboard": {
+        "map50": 0.9616666666666666,
+        "map50_95": 0.7783333333333331
+      },
+      "sports ball": {
+        "map50": 0.7861733748945372,
+        "map50_95": 0.6658458926678662
+      },
+      "suitcase": {
+        "map50": 0.11823076923076921,
+        "map50_95": 0.08957687145069694
+      },
+      "surfboard": {
+        "map50": 0.7099999999999999,
+        "map50_95": 0.49891538461538454
+      },
+      "traffic light": {
+        "map50": 0.7709090909090908,
+        "map50_95": 0.5195464535464536
+      },
+      "truck": {
+        "map50": 0.6244337662337662,
+        "map50_95": 0.5228227807486632
+      },
+      "tv": {
+        "map50": 0.19357142857142853,
+        "map50_95": 0.1301857142857143
+      },
+      "umbrella": {
+        "map50": 0.7656517991812108,
+        "map50_95": 0.622336565395389
+      },
+      "wine glass": {
+        "map50": 0.995,
+        "map50_95": 0.8955
+      }
+    }
+  },
+  "ablation": {
+    "change": "model size: n vs s",
+    "s": {
+      "map50": 0.6624333349090517,
+      "map50_95": 0.5321994714474684,
+      "train_time_sec": 1123.522064315
+    },
+    "n": {
+      "map50": 0.6299374124200587,
+      "map50_95": 0.4690413624512619,
+      "train_time_sec": 813.7943869150001
+    }
+  },
+  "errors": {
+    "tp": 1277,
+    "class": 20,
+    "localization": 49,
+    "background": 259,
+    "missed": 158
+  },
+  "device": "Tesla T4",
+  "train_time_sec": 1123.522064315,
+  "fast_mode": false,
+  "train_args": {
+    "lr0": 0.00027,
+    "lrf": 0.01,
+    "optimizer": "AdamW",
+    "warmup_bias_lr": 0.0,
+    "warmup_epochs": 5,
+    "freeze": 11,
+    "mosaic": 0.5,
+    "hsv_s": 0.8,
+    "hsv_h": 0.02,
+    "epochs": 60,
+    "batch": 16,
+    "seed": 0
+  },
+  "run_times": {
+    "heuristic": 1.5940613230000054,
+    "train": 1123.522064315,
+    "ablation_n": 813.7943869150001
+  }
+}
